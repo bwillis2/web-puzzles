@@ -1,0 +1,145 @@
+{% extends 'pbl/base.html' %}
+{% block content %}
+ 
+<div class = "panel panel-primary">
+   <div class = "panel-heading">
+      <h3 class = "panel-title" style="text-align:center;">Instructor Hints</h3>
+   </div>   
+   <div class = "panel-body">
+
+
+    <div class="row" >
+        <div class="col-xs-12 col-sm-4 ">
+             <div class = "panel-heading">
+                <h3 class = "panel-title" style="text-align:center;">Web Form Challenge Level 0</h3>
+             </div>   
+             <div class = "panel-body">
+              <ul class="list-group-item">
+                       <li>Fill out all the required fields in the form.</li>
+                       <li>Try to figure out the missing validation or logic in the form submission.</li>
+                       <li>Try to submit the form with Shipping information different from Billing information.</li>
+                       <li>Enter all the valid data in both section and change data on shipping information section</li>
+              </ul>
+             </div>
+          </div>   
+              <div class="col-xs-12 col-sm-4 ">
+             <div class = "panel-heading">
+                <h3 class = "panel-title" style="text-align:center;">Web Form Challenge Level 1</h3>
+             </div>   
+             <div class = "panel-body">
+                    <ul class="list-group-item">
+                      <li>Fill out all the required fields in the form.</li>
+                      <li>Try to figure out the missing validation in the form submission.</li>
+                      <li>Try to submit the form with Billing information different from Shipping information.</li>
+                      <li>Enter all the valid data in both section, then view inspect element and remove the disabled property of any one of the fields in Billing information section, You will get enabled field. Just modify the previous entered data. Finally submit the form and you will get score.</li>
+                    </ul>
+             </div>
+          </div> 
+              <div class="col-xs-12 col-sm-4 ">
+             <div class = "panel-heading">
+                <h3 class = "panel-title" style="text-align:center;">Web Form Challenge Level 2</h3>
+             </div>   
+             <div class = "panel-body">
+                    <ul class="list-group-item">
+                      <li>Perform the Form Completion Exercise and figure out the missing validation.</li>
+                      <li>Submit the answers on Submission section.</li>
+                      <li>Based on correct answer submitted, student will get the score.</li>
+                      <li> See the answers set for verfication </li>
+                    </ul>
+             </div>
+          </div> 
+
+    </div>
+
+    <div class='row'>
+                    <div class="col-xs-12 col-sm-4 ">
+             <div class = "panel-heading">
+                <h3 class = "panel-title" style="text-align:center;">Web Login Challenge Level 0</h3>
+             </div>   
+             <div class = "panel-body list-group-item">
+            <p >
+              To solve this puzzle, user need to go to source page. Method: Right click on page and click "View 
+Page Source". If the source code is carefully reviewed, the line that contains code for 'Sign In' 
+button also includes the static hard-coded value for the password. e.g.: var password='12345678
+<pre class="prettyprint">
+&lt;button onclick="var password = '12345678'; checkInput(password); return false;" type="submit" 
+class="btn btn-lg btn-primary btn-block"&gt;Sign In&lt;/button&gt;
+</pre>
+User just needs to enter any email address and the hard coded password and click the 'Sign In' button.
+Answer: 
+abc@xyz.com 
+12345678
+            </p>
+             </div>
+          </div>
+
+                    <div class="col-xs-12 col-sm-4 ">
+             <div class = "panel-heading">
+                <h3 class = "panel-title" style="text-align:center;">Web Login Challenge Level 1</h3>
+             </div>   
+             <div class = "panel-body list-group-item">
+            <p >
+To solve this puzzle, user need to go to source page. Method: Right click on page and click "View 
+Page Source". If the source code is carefully reviewed, the line that contains code for 'Sign in' 
+button also includes the JavaScript function. On clicking the button, it calls the JavaScript function
+ 'checkinput(password)'. To access the JavaScript file, go to head section in  page source. 
+ e.g: 
+ <pre class="prettyprint">
+ &lt;head&gt;... 
+ &lt;script src="js/demo1.js" type="text/javascript"&gt;&lt;/script&gt;
+ &lt;/head&gt;
+</pre>
+The function 'checkinput()' checks the password if it matches with the concatenation of string "s" and "12345678".
+User just needs to enter any email address and the password 's12345678' and click the 'Sign In' button
+            </p>
+             </div>
+          </div>
+     
+                    <div class="col-xs-12 col-sm-4 ">
+             <div class = "panel-heading">
+                <h3 class = "panel-title" style="text-align:center;">Web Login Challenge Level 2</h3>
+             </div>   
+             <div class = "panel-body list-group-item">
+            <p >
+This puzzle is next version of previous puzzles with a difficulty level. It also uses same JavaScript function to check the input 
+password. The main difference is that it uses the concept of hexa-decimal and hexMD5 other than plain text.
+To compute the exact password, user needs to compute the corresponding text string for given hexa-decimal formatted strings and concatenate 
+with the string passed in function, then compute its hexMD5 value.
+Code: 
+<pre class="prettyprint">
+if(document.login.inputPassword.value != hexMD5("\x43\x4f\x4d\x50\x37\x33\x32\x37"+pass)) {
+</pre>
+Hints: 
+From hexa-decimal to text:
+visit http://www.unit-conversion.info/texttools/hexadecimal/, 
+enter the hexa-decimal chars in input data section, choose 'hex numbers to text' from 'convert' drop-down.
+Click on 'Output' text-area. The corresponding text string is shown on output.
+\x43\x4f\x4d\x50\x37\x33\x32\x37
+COMP7327
+
+Compute MD5 Hex:
+Visit http://md5sum.org/, enter the plain text (concatenating the string from hexa-decimal and string passed in function) 
+and click 'Get MD5 Hex' button.
+Plaintext: COMP732712345678
+Output: b0b802febcbb710fbcc537dbce86745d
+User just needs to enter any email address and the password as above output and click the 'Sign In' button
+
+Answer: 
+abc@xyz.com 
+b0b802febcbb710fbcc537dbce86745d
+
+
+            </p>
+             </div>
+          </div>
+
+
+
+    </div>
+
+  </div>
+</div>
+
+
+ 
+ {% endblock %}

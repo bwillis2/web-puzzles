@@ -1,0 +1,215 @@
+{% extends 'pbl/base.html' %}
+{% block content %}
+ <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div class="jumbotron col-xs-16">
+            
+            
+            <h2><b>A Fuzz-Testing for Web Application Security</b></h2>
+            <div class="item" style="text-align: justify;">
+            
+              It is a platform which provides the challenges that simulate the actual websites with the vulnerability thus creating real scenarios. Each challenge has a vulnerability which is considered as an objective that user needs to find out.
+              <br/><a href="#" class="read_more">Read More</a><br/>
+  <!--             <span class="more_text">
+               The Level goes from very basic steps to high complexity levels depending upon how the vulnerabilities are detectable in real case. The score is also provided on the complexity level of the problem. Hence, the evaluation of user can be done based on the scoreboard. The basic information and tips are also provided along with the challenges so that user can reconnaissance the problem. In the end, user is provided with possible patches or solutions to mitigate the discovered vulnerabilities or issues. 
+             </span> -->
+            </div>
+           
+          </div>
+          <div class="row">
+              
+            <div class="col-xs-6 col-sm-6">
+              <h2>Web Form Challenges</h2>
+              <p>These challanges deals with the issue regarding the form validation. To complete each level user needs to do corresponding actions as per mentioned.</p>
+            </div>
+              <div class="col-xs-6 col-sm-6">
+                <div class="row">
+                  <h2>Web Form Challenges' Hints</h2>
+                  <div class="col-xs-6 col-sm-6">
+                   <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#flevel0">Level 0 Hints</button>
+                   <div id="flevel0" class="collapse">
+                      <ul class="list-group-item">
+                       <li>Fill out all the required fields in the form.</li>
+                       <li>Try to figure out the missing validation or logic in the form submission.</li>
+                       <li>Try to submit the form with Shipping information different from Billing information.</li>
+                     </ul>
+                    </div>
+                  </div>
+                   <div class="col-xs-6 col-sm-6">
+                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#flevel1">Level 1 Hints</button>
+                    <div id="flevel1" class="collapse">
+                    <ul class="list-group-item">
+                      <li>Fill out all the required fields in the form.</li>
+                      <li>Try to figure out the missing validation in the form submission.</li>
+                      <li>Try to submit the form with Billing information different from Shipping information.</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Put new rows for hints in here-->
+              </div>
+            </div>
+</div>
+           <div class="row">
+            <div class="col-xs-6 col-sm-6">
+              <h2 style="alignment: center;">Web Login Challenges</h2>
+              <p>These challenges deals with the login the website. User needs to have succesful login to complete each level.</p>
+            </div>
+          <div class="col-sm-6">
+              <div class="row">
+                <h2>Web Login Challenges' Hints</h2>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#level0">Level 0 Hints</button>
+                    <div id="level0" class="collapse">
+                      <ul class="list-group-item">
+                        <li>Try to Brute Force the login page</li>
+                        <li>Try to find out the input points</li>
+                        <li>View Source Code</li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#level1">Level 1 Hints</button>
+                  <div id="level1" class="collapse">
+                    <ul class="list-group-item">
+                      <li>Try to Brute Force the login page</li>
+                      <li>Try to find out the input points</li>
+                      <li>View Source Code</li>
+                      <li>Are there any functions that I need to be looking at?</li>
+                    </ul>
+                  </div>
+                </div>
+            
+                <div class="col-sm-6">
+                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#level2">Level 2 Hints</button>
+                    <div id="level2" class="collapse">
+                      <ul class="list-group-item">
+                        <li>Try to Brute Force the login page</li>
+                        <li>Try to find out the input points</li>
+                        <li>View Source Code</li>
+                        <li>Are there any functions that I need to be looking at?</li>
+                        <li>Hex?</li>
+                        <li>Is there something I need to research?</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#level3">Level 3 Hints</button>
+                    <div id="level3" class="collapse">
+                      <ul class="list-group-item">
+                        <li>Carefully read the information given in a web page:</li>
+                        <li>Try to figure out why the error is shown in the web page:</li>
+                        <li>Find the password and have a succesful login.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#level4">Level 4 Hints</button>
+                    <div id="level4" class="collapse">
+                      <ul class="list-group-item">
+                        <li>Play with the form "Encryption Method Used:" to figure out the encryption algorithm used.</li>
+                        <li>Try to find the encrypted password from source page</li>
+                        <li>Brtue force by entering the plain text in order to get the encyrpted passcode.</li>
+                        <li>Try with the decrypted code to have a succesful login.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>   
+          </div> <!-- web login -->
+      
+         <div class="row">
+               <div class="col-xs-6 col-sm-6">
+              <h2>Application Logic Challenges</h2>
+              <p>These challanges deals with the issue regarding the flaws in application logic. In most of the cases, the application does the thing what it is suppoosed to do. However, it fails by doing which is not supposed to do. To complete each level user needs to do corresponding actions as per mentioned.</p>
+            </div>
+              <div class="col-xs-6 col-sm-6">
+                <div class="row">
+                  <h2>Application Logic Challenges' Hints</h2>
+                  <div class="col-xs-6 col-sm-6">
+                   <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#llevel0">Level 0 Hints</button>
+                   <div id="llevel0" class="collapse">
+                      <ul class="list-group-item">
+                       <li>Figure out the application logic. i.e What the application is supoosed to do.</li>
+                       <li>Figure out the objective of the puzzle and what the applicaiton might have failed to restrict.</li>
+                       <li>Play some basic skills on math.</li>
+                     </ul>
+                    </div>
+                  </div>
+                   <div class="col-xs-6 col-sm-6">
+                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#llevel1">Level 1 Hints</button>
+                    <div id="llevel1" class="collapse">
+                    <ul class="list-group-item">
+                      <li>Figure out the application logic. i.e What the application is supoosed to do.</li>
+                      <li>Figure out the objective of the puzzle and what the applicaiton might have failed to restrict.</li>
+                      <li>Play with the form with various possible inputs</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+
+    </div><!--/row-->
+
+<!-- Don't try to rely on these too much now. I can't do all your work in real life too you know.-->
+
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" >
+            <div class="list-group">
+              <a type="button"class="list-group-item active collapse">Web Form Challanges</a>
+              <span title="Complete Submit form action">
+              <a href="{% url 'demo3' %}" class="list-group-item">Level 0</a></span>
+              <span title="Complete Submit form action">
+              <a href="{% url 'demo4' %}" class="list-group-item">Level 1</a></span>
+              <span title="Complete Submit form action">
+              <a href="{% url 'rand_form' %}" class="list-group-item">Level 2</a></span>
+            </div>
+            <div class="list-group">
+              <a type="button"class="list-group-item active collapse">Web Login Challanges</a>
+              <span title="You have to login here inserting correct password "> 
+              <a href="{% url 'demo0' %}" class="list-group-item">Level 0</a></span>
+              <span title="You have to login here inserting correct password ">
+              <a href="{% url 'demo1' %}" class="list-group-item">Level 1</a></span>
+              <span title="You have to login here inserting correct password ">            
+              <a href="{% url 'demo2' %}"  class="list-group-item">Level 2</a></span>
+              <span title="You have to login here inserting correct password ">            
+              <a href="{% url 'demo5' %}"  class="list-group-item">Level 3</a></span>
+              <span title="You have to login here inserting correct password ">
+              <a href="{% url 'crypto' %}"  class="list-group-item">Level 4</a></span>
+            </div>
+            <div class="list-group">
+              <a type="button"class="list-group-item active collapse">Application Logic Challanges</a>
+              <span title="Try to Tranfer the amount greater than given threshold amount:">
+              <a href="{% url 'app_logic0' %}" class="list-group-item">Level 0</a></span>
+              <span title="Try to Transfer the amount to your account:">
+              <a href="{% url 'app_logic1' %}" class="list-group-item">Level 1</a></span>
+            </div>
+            <div class="list-group">
+              <a type="button"class="list-group-item active collapse">Indirect Object References Challanges</a>
+              <span title="Try to access the another object that is not allowed">
+              <a href="{% url 'ido0' %}" class="list-group-item">Level 0</a></span>
+              <span title="Try to Transfer the amount to your account:">
+              <a href="{% url 'ido1' %}" class="list-group-item">Level 1</a></span>
+            </div>
+            <div class="list-group">
+              <a type="button"class="list-group-item active collapse">SQL Injection</a>
+              <span title="Login into an account that you have found info for from SQL Injection">
+              <a href="{% url 'sql0' %}" class="list-group-item">Level 0</a></span>
+              <a href="{% url 'sql1' %}" class="list-group-item">Level 1</a></span>
+            </div>
+             <div class = "panel panel-primary">
+               <div class = "panel-heading">
+                  <a href ="{% url 'challenge_details' %}"><h3 class = "panel-title" style="text-align:center; color:white;">See more challanges</h3></a>
+               </div>  
+             </div>
+        </div><!--/.sidebar-offcanvas-->
+      </div><!--/Pagerow-->
+ 
+ {% endblock %}

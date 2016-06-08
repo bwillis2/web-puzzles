@@ -1,0 +1,24 @@
+{% extends 'pbl/base.html' %}
+{% block content %}
+<h1> Score Details: {{ student_name}}</h1>
+		<div class="table-responsive hover">
+			<table class="table table-striped">
+    			<thead>
+			<tr>
+			<th>SN</th><th>Challenge</th><th>Level</th><th>Score</th>
+			</tr>
+			</thead>
+			<tbody>
+			
+			{% for comp in competition %}
+			<tr>
+			<td>{{ forloop.counter }}</td><td>{{ comp.challenge }}</td><td>{{ comp.level }}</td><td>{{ comp.score }}</td>
+			</tr>
+			{% endfor %}
+			<!-- <th></th><th></th><th>Total</th>{{ comp.total_score }}<th></th> -->
+			</tbody>
+			</table>
+		</div>
+
+
+{% endblock %}

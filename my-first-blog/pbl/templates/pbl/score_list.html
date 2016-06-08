@@ -1,0 +1,27 @@
+{% extends 'pbl/base.html' %}
+{% block content %}
+
+<h1> Total Scores:  </h1>
+		<div class="table-responsive hover">
+			<table class="table table-striped">
+    			<thead>
+			<tr>
+			<th>SN</th><th>Student</th><th>Score</th>
+			</tr>
+			</thead>
+			<tbody>
+			{% for score in scores %}
+			<tr>
+			<td>{{ forloop.counter }}</td><td>
+			{% if score.student.id == request.user.id or request.user.is_superuser %}
+			<a href="{% url 'score_details' student_id=score.student.id %}">
+			{% endif %}
+			{{ score.student}}</a></td><td>{{ score.score }}</td>
+			</tr>
+			{% endfor %}
+			</tbody>
+			</table>
+		</div>
+
+
+{% endblock %}
